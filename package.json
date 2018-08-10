@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "dotenv": "^6.0.0",
+    "iview": "^3.0.0",
     "js-cookie": "^2.2.0",
     "localforage": "^1.7.2",
     "markdown-it": "^8.4.2",
@@ -37,13 +38,13 @@
     "optimize-css-assets-webpack-plugin": "4.0.3",
     "standard": "^11.0.1",
     "style-loader": "^0.22.1",
+    "timeout-as-promise": "^1.0.0",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.3.0",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "workbox-webpack-plugin": "^3.4.1",
     "yarn-upgrade-all": "^0.3.0"
   },
   "alias": {

@@ -1,2 +1,4 @@
+--ignore-dir=build
+
 --ignore-file=match:/^yarn\.lock$/
 --ignore-file=match:/^yarn-error\.log$/
