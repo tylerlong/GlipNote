@@ -18,14 +18,7 @@ export default {
         loader: 'vue-loader'
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10240
-        }
-      },
-      {
-        test: /\.(png)$/,
+        test: /\.(woff|woff2|eot|ttf|svg|png)$/,
         loader: 'url-loader',
         options: {
           limit: 10240
