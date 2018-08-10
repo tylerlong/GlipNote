@@ -1,3 +1,5 @@
+import * as R from 'ramda'
+
 export const getNotes = state => () => {
-  return state.notes
+  return R.reverse(state.notes)
 }

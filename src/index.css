@@ -2,3 +2,11 @@
   text-align: center;
   margin: 16px 0;
 }
+
+.main {
+  height:100vh;
+}
+
+.split-pane {
+  padding: 16px
+}

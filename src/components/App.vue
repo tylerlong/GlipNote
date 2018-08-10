@@ -1,13 +1,20 @@
 <template>
-  <div>
+  <div class="main">
     <Menu mode="horizontal" theme="primary" active-name="1">
       <MenuItem name="log-out" @click.native="logOut">
         <Icon type="md-exit" /> Log Out
       </MenuItem>
     </Menu>
-    <ul>
-      <li v-for="note in getNotes()">{{ note.title }}</li>
-    </ul>
+    <Split v-model="split">
+      <div slot="left" class="split-pane">
+        <ul>
+          <li v-for="note in getNotes()">{{ note.title }}</li>
+        </ul>
+      </div>
+      <div slot="right" class="split-pane">
+        Right Pane
+      </div>
+    </Split>
   </div>
 </template>
 
@@ -17,6 +24,11 @@ import { mapGetters } from 'vuex'
 import rc from '../api/ringcentral'
 
 export default {
+  data () {
+    return {
+      split: '256px'
+    }
+  },
   computed: {
     ...mapGetters(['getNotes'])
   },
