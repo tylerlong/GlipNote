@@ -22,4 +22,9 @@ body, html {
 
 .note-card {
   margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.active-note-card {
+  background-color: lightblue;
 }
