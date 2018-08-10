@@ -14,7 +14,8 @@
       </div>
       <div slot="right" class="split-pane">
         <div v-if="currentNote">
-          <h1>{{ currentNote.title }}</h1>
+          <h1 class="note-title">{{ currentNote.title }}</h1>
+          <div v-html="currentNote.body"></div>
         </div>
       </div>
     </Split>

@@ -2,7 +2,6 @@ body, html {
   height: 100%;
 }
 
-
 .hero-card {
   text-align: center;
   margin: 16px 0;
@@ -27,4 +26,8 @@ body, html {
 
 .active-note-card {
   background-color: lightblue;
+}
+
+.note-title {
+  margin-bottom: 32px;
 }

@@ -1,5 +1,6 @@
 import * as R from 'ramda'
 import localforage from 'localforage'
+import multipartMixedParser from 'multipart-mixed-parser'
 
 import rc from '../api/ringcentral'
 
@@ -23,6 +24,8 @@ export const fetchExtension = async ({ commit }) => {
 }
 
 export const fetchNotes = async ({ commit }) => {
-  const r = await rc.get('/restapi/v1.0/glip/notes')
-  commit('setNotes', r.data.records)
+  let r = await rc.get('/restapi/v1.0/glip/notes')
+  r = await rc.get(`/restapi/v1.0/glip/notes/${r.data.records.map(item => item.id).join(',')}`)
+  const notes = multipartMixedParser.parse(r.data).slice(1).filter(p => 'id' in p)
+  commit('setNotes', notes)
 }
