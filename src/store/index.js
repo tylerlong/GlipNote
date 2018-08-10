@@ -47,10 +47,10 @@ rc.request = async (config) => {
 let inited = false
 rc.on('tokenChanged', async token => {
   if (R.isNil(token)) { // logout
-    Cookies.remove('RINGCENTRAL_TOKEN')
+    Cookies.remove('GLIP_NOTE_RINGCENTRAL_TOKEN')
     window.location.reload(false) // re-init all things
   } else {
-    Cookies.set('RINGCENTRAL_TOKEN', token, { expires: 7 })
+    Cookies.set('GLIP_NOTE_RINGCENTRAL_TOKEN', token, { expires: 7 })
     setTimeout(() => {
       if (router.currentRoute.name === 'login' || router.currentRoute.name === null) {
         router.push({ name: 'root' })
@@ -74,6 +74,6 @@ router.afterEach((to, from) => {
   }
 })
 
-rc.token(Cookies.getJSON('RINGCENTRAL_TOKEN'))
+rc.token(Cookies.getJSON('GLIP_NOTE_RINGCENTRAL_TOKEN'))
 
 export default store

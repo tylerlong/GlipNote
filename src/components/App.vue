@@ -1,9 +1,25 @@
 <template>
-  <div>Hello GlipNote!</div>
+  <div>
+    <ul>
+      <li v-for="note in getNotes()">{{ note.title }}</li>
+    </ul>
+    <Button type="success" @click="logOut">Log Out</Button>
+  </div>
 </template>
 
 <script>
-export default {
+import { mapGetters } from 'vuex'
 
+import rc from '../api/ringcentral'
+
+export default {
+  computed: {
+    ...mapGetters(['getNotes'])
+  },
+  methods: {
+    logOut: function () {
+      rc.revoke()
+    }
+  }
 }
 </script>
