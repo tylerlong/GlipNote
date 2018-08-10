@@ -1,6 +1,6 @@
 # GlipNote
 
-Glip Notes app like Evernote and OneNote.
+Note taking app like Evernote and OneNote.
 
 
 ## [Live Demo](https://tylerlong.github.io/glip-note/)

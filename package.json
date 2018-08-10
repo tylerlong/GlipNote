@@ -1,5 +1,6 @@
 {
   "name": "glip-note",
+  "description": "Note taking app like Evernote and OneNote",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
