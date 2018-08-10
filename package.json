@@ -21,6 +21,7 @@
     "multipart-mixed-parser": "^0.1.2",
     "ramda": "^0.25.0",
     "ringcentral-js-concise": "^0.5.5",
+    "urijs": "^1.19.1",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
