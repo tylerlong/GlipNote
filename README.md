@@ -1,4 +1,4 @@
-# Glip Notes
+# GlipNote
 
 Glip Notes app like Evernote and OneNote.
 
