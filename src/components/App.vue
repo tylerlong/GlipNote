@@ -6,10 +6,11 @@
       </MenuItem>
     </Menu>
     <Split v-model="split">
-      <div slot="left" class="split-pane">
-        <ul>
-          <li v-for="note in getNotes()">{{ note.title }}</li>
-        </ul>
+      <div slot="left" class="split-pane left-split-pane">
+        <Card v-for="note in getNotes()" :bordered="false" :key="note.id" class="note-card">
+          <p slot="title">{{ note.title }}</p>
+          <p>{{ note.preview }}</p>
+        </Card>
       </div>
       <div slot="right" class="split-pane">
         Right Pane
@@ -26,7 +27,7 @@ import rc from '../api/ringcentral'
 export default {
   data () {
     return {
-      split: '256px'
+      split: 0.4
     }
   },
   computed: {

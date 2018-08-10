@@ -1,12 +1,25 @@
+body, html {
+  height: 100%;
+}
+
+
 .hero-card {
   text-align: center;
   margin: 16px 0;
 }
 
-.main {
-  height:100vh;
+#app, .main {
+  height: 100%;
 }
 
 .split-pane {
   padding: 16px
+}
+
+.left-split-pane {
+  background-color: #eee;
+}
+
+.note-card {
+  margin-bottom: 16px;
 }
