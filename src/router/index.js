@@ -7,7 +7,7 @@ import Login from '../components/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/glip/', name: 'root', component: App },
+  { path: '/notes/', name: 'root', component: App },
   { path: '/login/', name: 'login', component: Login }
 ]
 const router = new VueRouter({ routes })
